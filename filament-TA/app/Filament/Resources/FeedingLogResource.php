@@ -33,20 +33,6 @@ class FeedingLogResource extends Resource
                         'BERHASIL ISI' => 'BERHASIL ISI',
                     ])
                     ->required(),
-
-                // Input Sisa Stok dalam persen (0 - 100)
-                TextInput::make('stock_percent')
-                    ->label('Sisa Stok (%)')
-                    ->numeric()
-                    ->minValue(0)
-                    ->maxValue(100)
-                    ->required(),
-
-                // Input Nilai Kecerahan Kamera
-                TextInput::make('brightness')
-                    ->label('Kecerahan')
-                    ->numeric()
-                    ->required(),
             ]);
     }
 
@@ -62,17 +48,6 @@ class FeedingLogResource extends Resource
                         default => 'gray'
                     })
                     ->searchable(),
-
-                TextColumn::make('stock_percent')
-                    ->label('sisa_stok')
-                    ->suffix('%')
-                    ->numeric()
-                    ->sortable(),
-
-                TextColumn::make('brightness')
-                    ->label('kecerahan')
-                    ->numeric()
-                    ->sortable(),
 
                 TextColumn::make('created_at')
                     ->label('waktu')

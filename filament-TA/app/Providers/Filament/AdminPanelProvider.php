@@ -27,9 +27,24 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+
+            ->brandName('CAT FEEDER DASHBOARD') 
+            
+            ->font('Poppins') 
+
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Zinc,   
+                'danger' => Color::Rose,    
+                'success' => Color::Emerald, 
+                'warning' => Color::Amber,   
+                'info' => Color::Cyan,       
             ])
+            
+            ->darkMode(true) 
+            
+            ->sidebarCollapsibleOnDesktop() 
+            
+            
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([

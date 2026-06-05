@@ -14,8 +14,6 @@ return new class extends Migration
         Schema::create('feeding_logs', function (Blueprint $table) {
             $table->id();
             $table->string('status');
-            $table->integer('stock_percent');
-            $table->integer('brightness');
             $table->timestamps();
         });
     }
